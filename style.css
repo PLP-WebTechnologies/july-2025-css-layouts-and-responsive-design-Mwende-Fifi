@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
+}
+
+/* Header */
+.site-header {
+  background: #3a3a6a;
+  color: #fff;
+  padding: 1rem;
+}
+
+.site-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex; /* Flexbox */
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Grid Layout */
+.site-main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Content */
+.content h2 {
+  margin: 2rem 0 1rem;
+  color: #3a3a6a;
+}
+
+.card-container {
+  display: flex; /* Flexbox */
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  flex: 1 1 220px;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f0f0f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+  color: #3a3a6a;
+}
+
+.sidebar ul {
+  list-style: square;
+  padding-left: 1.2rem;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .site-main {
+    grid-template-columns: 2fr 1fr;
+  }
+  .card-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .site-main {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1; /* Sidebar above content */
+  }
+}
